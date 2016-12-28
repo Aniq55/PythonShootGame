@@ -1,20 +1,20 @@
-# PythonShootGame
+# Shoot 'em All
 
-A simple shoot game written in Python.
+A simple shooting game written in Python.
 
-# Introduce
 
-This project only include two simple .py files: 
-
-1. mainGame.py: The initialization and main loop of the game.
-2. gameRole.py: Class of the game role.
-
-# Requirement
+# Requirements
 
 1. Python 2.7
 2. Python-Pygame
-  
-# How To Start Game
+
+# Installing Pygame
+
+```bash
+$ sudo -H pip install pygame
+```
+
+# Running the Game
   
 ```bash
 $ python mainGame.py
@@ -23,7 +23,7 @@ $ python mainGame.py
 # License
 GPL
 
-#Screeshot
+#Screeshots
 
 ![](http://s2.postimg.org/728c1wy4p/Screenshot_5.png)
 
