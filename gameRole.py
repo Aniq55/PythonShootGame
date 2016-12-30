@@ -32,6 +32,7 @@ class Player(pygame.sprite.Sprite):
         self.bullets = pygame.sprite.Group()            #A collection of bullets fired by a player's airplane
         self.img_index = 0                              #Button of Picture Index
         self.is_hit = False                             #Whether the player is hit
+        self.shoot_action = False						#To control shooting action
 
     def shoot(self, bullet_img):
         bullet = Bullet(bullet_img, self.rect.midtop)

@@ -75,11 +75,13 @@ while running:
 
     #Control the firing of bullets, and launch bullets
     if not player.is_hit:
-        if shoot_frequency % 15 == 0:
-            bullet_sound.play()
-            player.shoot(bullet_img)
+        if shoot_frequency % 8 == 0:
+            if player.shoot_action is True:
+                bullet_sound.play()
+                player.shoot(bullet_img)
+        player.shoot_action = False
         shoot_frequency += 1
-        if shoot_frequency >= 15:
+        if shoot_frequency >= 8:
             shoot_frequency = 0
 
     #Generation of enemy aircraft
@@ -173,6 +175,8 @@ while running:
             player.moveLeft()
         if key_pressed[K_d] or key_pressed[K_RIGHT]:
             player.moveRight()
+        if key_pressed[K_SPACE]:
+            player.shoot_action = True
 
 
 font = pygame.font.Font(None, 48)
